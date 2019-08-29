@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "version": "0.1.2",
+  "manifest_version": 2,
+  "short_name": "canvas-defender",
+  "name": "OurSocks.io Canvas Fingerprint Spoofer",
+  "permissions": ["storage", "notifications"],
+  "background": {"page": "lib/chrome/background.html"},
+  "homepage_url": "https://oursocks.io/",
+  "options_ui": {"page": "data/options/options.html", "open_in_tab": true},
+  "description": "Defending against canvas fingerprinting by reporting a fake value.",
+  "content_scripts": [{
+    "all_frames": true,
+    "matches": ["*://*/*"],
+    "match_about_blank": true,
+    "run_at": "document_start",
+    "js": ["data/content_script/inject.js"]
+  }],
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png"
+  }
+}
