@@ -19,7 +19,7 @@ Remember:
 
 ## How to test that it's working
 
-1. Open a browser window.
+1. Open a browser window. Load the folder which contains manifest.json as an unpacked extension.
 2. Go to https://browserleaks.com/canvas and note the 'Signature' line's value.
 3. Go to chrome-extension://bningnmfogcgkgmnjoicajjnkbogecoo/data/options/options.html?fingerprint_seed=0.123
 4. Go to https://browserleaks.com/canvas and note the 'Signature' line's value. It should be different.
